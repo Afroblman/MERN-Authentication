@@ -13,6 +13,9 @@ node_modules/
 .env
 .env.*
 
+# Don't ignore .env.example
+!.env.example
+
 # IDE / editor files
 .vscode/
 .idea/
