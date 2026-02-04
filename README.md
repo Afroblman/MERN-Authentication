@@ -2,12 +2,12 @@
 
 <table>
   <tr>
-    <td><img src="./client/src/assets/screenshot1.png" alt="Screenshot 1" width="300"></td>
-    <td><img src="./client/src/assets/screenshot2.png" alt="Screenshot 2" width="300"></td>
+    <td><img src="./client/src/assets/screenshot1.png" alt="Screenshot 1" width="350"></td>
+    <td><img src="./client/src/assets/screenshot2.png" alt="Screenshot 2" width="350"></td>
   </tr>
   <tr>
-    <td><img src="./client/src/assets/screenshot3.png" alt="Screenshot 3" width="300"></td>
-    <td><img src="./client/src/assets/screenshot4.png" alt="Screenshot 4" width="300"></td>
+    <td><img src="./client/src/assets/screenshot3.png" alt="Screenshot 3" width="350"></td>
+    <td><img src="./client/src/assets/screenshot4.png" alt="Screenshot 4" width="350"></td>
   </tr>
 </table>
 
