@@ -1,12 +1,15 @@
 # 🔐 MERN Authentication System
 
-![Project Screenshot](./client/src/assets/screenshot1.png)
-
-![Project Screenshot](./client/src/assets/screenshot2.png)
-
-![Project Screenshot](./client/src/assets/screenshot3.png)
-
-![Project Screenshot](./client/src/assets/screenshot4.png)
+<table>
+  <tr>
+    <td><img src="./client/src/assets/screenshot1.png" alt="Screenshot 1" width="300"></td>
+    <td><img src="./client/src/assets/screenshot2.png" alt="Screenshot 2" width="300"></td>
+  </tr>
+  <tr>
+    <td><img src="./client/src/assets/screenshot3.png" alt="Screenshot 3" width="300"></td>
+    <td><img src="./client/src/assets/screenshot4.png" alt="Screenshot 4" width="300"></td>
+  </tr>
+</table>
 
 A **full-stack MERN authentication project** with secure JWT-based authentication, email verification, password management, and cookie-based sessions. Built using modern tools like **Vite**, **Bootstrap**, **React Toastify**, and **Nodemailer**.
 
