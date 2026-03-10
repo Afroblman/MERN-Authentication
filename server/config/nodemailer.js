@@ -2,8 +2,8 @@ import nodemailer from "nodemailer";
 
 const transporter = nodemailer.createTransport({
   // host: "smtp.gmail.com",
-  host: "smtp-relay.brevo.com",
-  port: 587,
+  host: "sandbox.smtp.mailtrap.io",
+  port: 2525,
   // port: 465,
   secure: false,
   auth: {
