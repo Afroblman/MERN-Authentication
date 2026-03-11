@@ -13,14 +13,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const { checkAuth } = useContext(AuthContext);
+  const { url, checkAuth } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${url}/api/auth/login`,
         { email, password },
         { withCredentials: true },
       );

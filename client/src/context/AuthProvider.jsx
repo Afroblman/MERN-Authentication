@@ -6,10 +6,12 @@ export const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
   const [loading, setLoading] = useState(true);
 
+  const url = import.meta.env.BACKEND_URL;
+
   const checkAuth = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:5000/api/auth/is-auth",
+        `${url}/api/auth/is-auth`,
         {},
         { withCredentials: true },
       );
@@ -30,7 +32,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ isAuth, loading, checkAuth }}>
+    <AuthContext.Provider value={{ isAuth, url, loading, checkAuth }}>
       {children}
     </AuthContext.Provider>
   );

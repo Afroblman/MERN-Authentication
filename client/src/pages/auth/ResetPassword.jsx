@@ -1,13 +1,15 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import AuthLayout from "../../components/layout/AuthLayout";
 import InputField from "../../components/form/InputField";
 import SubmitButton from "../../components/form/SubmitButton";
+import { AuthContext } from "../../context/AuthContext";
 
 const ResetPassword = () => {
+  const { url } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
@@ -16,7 +18,7 @@ const ResetPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/send-password-reset-otp",
+        `${url}/api/auth/send-password-reset-otp`,
         { email },
         {
           withCredentials: true,

@@ -1,13 +1,15 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import AuthLayout from "../../components/layout/AuthLayout";
 import InputField from "../../components/form/InputField";
+import { AuthContext } from "../../context/AuthContext";
 
 const OTPNewPassword = () => {
+  const { url } = useContext(AuthContext);
   const [otp, setOtp] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const navigate = useNavigate();
@@ -17,7 +19,7 @@ const OTPNewPassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/reset-password",
+        `${url}/api/auth/reset-password`,
         { otp, newPassword },
         { withCredentials: true },
       );

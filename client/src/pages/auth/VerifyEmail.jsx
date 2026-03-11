@@ -11,14 +11,14 @@ import { AuthContext } from "../../context/AuthContext";
 const VerifyEmail = () => {
   const [otp, setOtp] = useState("");
   const navigate = useNavigate();
-  const { checkAuth } = useContext(AuthContext);
+  const { url, checkAuth } = useContext(AuthContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/verify-account",
+        `${url}/api/auth/verify-account`,
         { otp },
         { withCredentials: true },
       );

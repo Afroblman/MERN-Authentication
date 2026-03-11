@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { toast } from "react-toastify";
 import Form from "react-bootstrap/Form";
 import "./Signup.css";
@@ -7,8 +7,10 @@ import axios from "axios";
 import AuthLayout from "../../components/layout/AuthLayout.jsx";
 import InputField from "../../components/form/InputField.jsx";
 import SubmitButton from "../../components/form/SubmitButton.jsx";
+import { AuthContext } from "../../context/AuthContext.js";
 
 const Signup = () => {
+  const { url } = useContext(AuthContext);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +21,7 @@ const Signup = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        `${url}/api/auth/register`,
         { name, email, password },
         { withCredentials: true },
       );
