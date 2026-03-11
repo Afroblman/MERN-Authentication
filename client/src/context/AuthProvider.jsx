@@ -6,7 +6,7 @@ export const AuthProvider = ({ children }) => {
   const [isAuth, setIsAuth] = useState(false);
   const [loading, setLoading] = useState(true);
 
-  const url = import.meta.env.BACKEND_URL;
+  const url = import.meta.env.VITE_BACKEND_URL;
 
   const checkAuth = async () => {
     try {
