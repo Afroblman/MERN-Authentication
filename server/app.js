@@ -11,7 +11,10 @@ connectDB();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      "https://mern-authentication-woad.vercel.app/",
+    ],
     credentials: true,
   }),
 );
