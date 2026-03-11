@@ -32,7 +32,7 @@ const Signup = () => {
         toast.success("Registration successful");
 
         await axios.post(
-          "http://localhost:5000/api/auth/send-verify-otp",
+          `${url}/api/auth/send-verify-otp`,
           {},
           {
             withCredentials: true,
