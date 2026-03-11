@@ -4,8 +4,11 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Navbar, Container } from "react-bootstrap";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 const Navigationbar = () => {
+  const { url } = useContext(AuthContext);
   const location = useLocation();
   const isDashboard = location.pathname.startsWith("/dashboard");
   const navigate = useNavigate();
@@ -13,7 +16,7 @@ const Navigationbar = () => {
   const handleLogout = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/logout",
+        `${url}/api/auth/logout`,
         {},
         { withCredentials: true },
       );
