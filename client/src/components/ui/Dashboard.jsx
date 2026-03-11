@@ -3,19 +3,19 @@ import { Container, Button, Row, Col, Card } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import Navigationbar from "../navigation/Navbar";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 function Dashboard() {
+  const { url } = useContext(AuthContext);
   const [name, setName] = useState("");
 
   useEffect(() => {
     async function fetchUser() {
       try {
-        const response = await axios.get(
-          "http://localhost:5000/api/user/data",
-          {
-            withCredentials: true,
-          },
-        );
+        const response = await axios.get(`${url}/api/user/data`, {
+          withCredentials: true,
+        });
         const data = response.data;
         setName(data.userData.name);
       } catch (error) {
