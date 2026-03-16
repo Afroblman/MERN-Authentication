@@ -1,4 +1,4 @@
-# 🔐 MERN Authentication System
+# MERN Authentication System
 
 <table>
   <tr>
@@ -15,22 +15,22 @@ A **full-stack MERN authentication project** with secure JWT-based authenticatio
 
 ---
 
-## ✨ Features
+## Features
 
-- ✅ User Signup & Login
-- 📧 Email Verification using Nodemailer
-- 🔐 JWT Authentication
-- 🍪 Cookie-Based Authentication
-- 🔑 Forgot & Reset Password
-- 🚪 Secure Logout
-- 🛡 Protected Routes
-- 🔔 Toast Notifications
-- ⚡ Fast Frontend with Vite
-- 🔄 Auto Server Reload using Nodemon
+- User Signup & Login
+- Email Verification using Nodemailer
+- JWT Authentication
+- Cookie-Based Authentication
+- Forgot & Reset Password
+- Secure Logout
+- Protected Routes
+- Toast Notifications
+- Fast Frontend with Vite
+- Auto Server Reload using Nodemon
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 ### Frontend
 
